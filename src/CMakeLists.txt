@@ -54,7 +54,8 @@ else()
     use_cxx(etcd-cpp-api)
     set_exceptions(etcd-cpp-api)
     target_link_libraries(etcd-cpp-api PUBLIC
-                          ${CPPREST_LIB}  # n.b.: the asynchronous client requires pplx in cpprestsdk
+                          #${CPPREST_LIB}  # n.b.: the asynchronous client requires pplx in cpprestsdk
+                          cpprest
                           ${OPENSSL_LIBRARIES}
                           ${GRPC_LIBRARIES}
     )
