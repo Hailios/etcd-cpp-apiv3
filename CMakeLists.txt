@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 3.10 FATAL_ERROR)
 project (etcd-cpp-api)
 
+set(cpprestsdk_DIR /home/jakob/development/git/c++/cpprestsdk/lib/cmake/cpprestsdk)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(etcd-cpp-api_VERSION_MAJOR 0)
