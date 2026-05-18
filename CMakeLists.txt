@@ -1,7 +1,14 @@
 cmake_minimum_required (VERSION 3.10 FATAL_ERROR)
 project (etcd-cpp-api)
 
-set(cpprestsdk_DIR /home/jakob/development/git/c++/cpprestsdk/lib/cmake/cpprestsdk)
+if (DEFINED ENV{cpprestsdk_DIR})
+    SET(cpprestsdk_DIR $ENV{cpprestsdk_DIR})
+    message(STATUS "cpprestsdk_DIR: ${cpprestsdk_DIR}")
+else ()
+    set(cpprestsdk_DIR /home/jakob/development/git/c++/cpprestsdk/lib/cmake/cpprestsdk)
+    message(STATUS "cpprestsdk_DIR default: ${cpprestsdk_DIR}")
+endif ()
+
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
